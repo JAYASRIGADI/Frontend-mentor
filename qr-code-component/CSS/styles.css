@@ -1,3 +1,10 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
 :root {
   --bg-color: #D5E1EF;
   --primary-text: #1F314F;
@@ -7,7 +14,7 @@
 
 body {
     background-color: var(--bg-color);
-    font-family: Arial;
+    font-family: "Outfit", sans-serif;
     margin: 0;
 }
 main {
@@ -21,30 +28,28 @@ main {
 
 .card-container {
     background-color: var(--card-bg);
-    width: 300px;
-    height: 499px;
+    max-width: 320px;
     padding: 16px 16px 40px 16px;
     border-radius: 20px;
+    box-shadow: 0px 25px 25px rgba(0,0,0,0.05);
 }
 
 img.qrImage {
-    position: relative;
     width: 100%;
     border-radius: 10px;
+    margin-bottom: 24px;
 }
 
-div.card-text {
+.card-text {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: 24px;
     padding: 0px 16px 0px 16px;
 }
 
 h1 {
-    font-family: 'Outfit', sans-serif;
-    font-weight: bold;
+    font-weight: 700;
     color: var(--primary-text);
     font-size: 22px;
     line-height: 120%;
@@ -52,8 +57,7 @@ h1 {
     margin: 0px;
 }
 .card-subtext {
-    font-family: 'Outfit', sans-serif;
-    font-weight: normal;
+    font-weight: 400;
     color: var(--secondary-text);
     font-size: 15px;
     line-height: 140%;
